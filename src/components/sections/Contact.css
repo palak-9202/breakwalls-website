@@ -1,0 +1,46 @@
+.contact {
+  padding: 9rem 0;
+  background: var(--color-bg-dark);
+}
+
+.contact__inner {
+  max-width: 680px;
+}
+
+/* Override the shared eyebrow colour on dark background */
+.contact__eyebrow {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.contact__heading {
+  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.contact__sub {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 400px;
+  margin-bottom: 2.75rem;
+}
+
+.contact__btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: var(--font);
+  color: var(--color-bg-dark);
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  transition: opacity 0.2s;
+}
+
+.contact__btn:hover { opacity: 0.82; }

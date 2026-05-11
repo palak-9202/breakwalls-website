@@ -1,0 +1,94 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(155deg, #0d0d0d 0%, #161616 60%, #0a0a0a 100%);
+  overflow: hidden;
+}
+
+/* Dark translucent overlay — sits between canvas and text so pulses don't obscure content */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+/* Subtle noise/grain overlay for depth */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* p5 mount div + the canvas p5 appends inside it */
+.hero__canvas-mount {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;  /* let clicks pass through to content */
+}
+
+.hero__canvas-mount canvas {
+  display: block;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: calc(var(--nav-height) + 5rem) 2rem 7rem;
+}
+
+.hero__eyebrow {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: clamp(0.1rem, 0.18vw, 0.18rem);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.80);
+  margin-bottom: 1.25rem;
+}
+.hero__heading {
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin-bottom: 1.75rem;
+}
+
+.hero__heading em {
+  font-size: clamp(2rem, 1.5vw, 2rem);
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero__subtext {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.48);
+  max-width: 460px;
+  margin-bottom: 2.75rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .hero__actions { flex-direction: column; align-items: flex-start; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+}
