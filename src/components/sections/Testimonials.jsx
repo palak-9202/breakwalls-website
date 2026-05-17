@@ -14,7 +14,7 @@ const TESTIMONIALS = [
   {
     logo: pidilite,
     alt: 'Pidilite',
-    quote: "The channel visibility module gave us a level of trade inventory insight we simply did not have before. We've reduced excess stock at our distributors by 30% within two quarters while actually improving service levels to end customers.",
+    quote: "The channel visibility module gave us a level of trade inventory insight we simply did not have before. We've reduced excess stock at our distributors by 30% within two quarters while actually improving service levels to end customers. The channel visibility module gave us a level of trade inventory insight we simply did not have before. We've reduced excess stock at our distributors by 30% within two quarters while actually improving service levels to end customers.",
     name: 'VP Operations',
     company: 'Regional Distribution Company',
   },
