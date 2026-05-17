@@ -25,10 +25,10 @@
   max-width: var(--max-width);
   height: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2.5rem 0 1rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
 /* ── Logo ──────────────────────────────────────────────────────────────── */
@@ -38,16 +38,25 @@
   flex-shrink: 0;
 }
 
-.navbar__logo img {
-  height: 26px;
-  width: auto;
+.navbar__logo-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.navbar__logo-wordmark {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--color-text);
+.navbar__logo-img {
+  height: 26px;
+  width: auto;
+  display: block;
+  transition: opacity 0.4s ease;
+}
+
+.navbar__logo-img--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
 }
 
 /* ── Desktop links ─────────────────────────────────────────────────────── */
@@ -65,7 +74,7 @@
   font-weight: 400;
   color: var(--color-text-muted);
   border-radius: 6px;
-  transition: color 0.18s, background 0.18s;
+  transition: color 0.3s ease, background 0.3s ease;
 }
 
 .navbar__link:hover {
@@ -83,7 +92,7 @@
   border: 1px solid var(--color-border);
   border-radius: 8px;
   white-space: nowrap;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar__cta:hover {
@@ -114,7 +123,7 @@
   background: var(--color-text);
   border-radius: 2px;
   transform-origin: center;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease, background 0.3s ease;
 }
 
 .navbar__burger--open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
@@ -171,4 +180,29 @@
   .navbar__cta    { display: none; }
   .navbar__burger { display: flex; }
   .navbar__drawer { display: flex; }
+}
+
+/* ── Dark-background overrides ──────────────────────────────────────────── */
+.navbar--dark .navbar__link {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.navbar--dark .navbar__link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.navbar--dark .navbar__cta {
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.navbar--dark .navbar__cta:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar--dark .navbar__burger span {
+  background: #ffffff;
 }

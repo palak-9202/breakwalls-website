@@ -1,33 +1,33 @@
-.solutions {
+.services {
   padding: 7rem 0;
-  background: var(--color-bg);
+  background: var(--color-bg-alt);
 }
 
-.solutions__header {
+.services__header {
   max-width: 600px;
   margin-bottom: 4rem;
 }
 
-.solutions__grid {
+.services__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
-.solutions__card {
+.services__card {
   padding: 2rem 2rem 2.25rem;
-  background: var(--color-bg-alt);
+  background: var(--color-bg);
   border-radius: 14px;
   border: 1px solid var(--color-border);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.solutions__card:hover {
+.services__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
 }
 
-.solutions__card-icon {
+.services__card-icon {
   width: 34px;
   height: 34px;
   background: var(--color-text);
@@ -35,25 +35,25 @@
   margin-bottom: 1.5rem;
 }
 
-.solutions__card-title {
-  font-size: 1.05rem;
+.services__card-title {
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.solutions__card-bullets {
+.services__card-list {
   padding-left: 1.1rem;
   list-style: disc;
 }
 
-.solutions__card-bullets li {
+.services__card-list li {
   font-size: 0.88rem;
   line-height: 1.7;
   color: var(--color-text-muted);
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.5rem;
 }
 
-.solutions__card-bullets li:last-child {
+.services__card-list li:last-child {
   margin-bottom: 0;
 }

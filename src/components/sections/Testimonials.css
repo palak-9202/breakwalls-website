@@ -1,0 +1,72 @@
+.testimonials {
+  padding: 7rem 0;
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+
+.testimonials__header {
+  max-width: 600px;
+  margin-bottom: 4rem;
+}
+
+.testimonials__header .section-eyebrow {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.testimonials__header .section-heading {
+  color: var(--color-text-light);
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.testimonials__card {
+  padding: 2.5rem 2rem 2.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.testimonials__logo {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  padding: 0.55rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  align-self: flex-start;
+}
+
+.testimonials__quote {
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+  flex: 1;
+}
+
+.testimonials__attribution {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.testimonials__name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.testimonials__company {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.45);
+}

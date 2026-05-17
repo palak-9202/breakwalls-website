@@ -1,13 +1,35 @@
 import { useState, useEffect } from 'react'
 import './Navbar.css'
-// import logo from '../assets/icons/logo.svg'   ← uncomment once you have a logo file
+import logoWhite from '../assets/images/Asset 1@3x.png'
+import logoBlack from '../assets/images/Asset 2@3x.png'
+
+const NAV_HEIGHT = 64
 
 export default function Navbar({ links }) {
   const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
+  const [isDark,    setIsDark]    = useState(true) // hero is first and dark
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
+    const checkTheme = () => {
+      const midY = NAV_HEIGHT / 2
+      const themed = document.querySelectorAll('[data-navbar-theme]')
+      let theme = 'dark'
+      themed.forEach(el => {
+        const rect = el.getBoundingClientRect()
+        if (rect.top <= midY && rect.bottom > midY) {
+          theme = el.dataset.navbarTheme // last (most nested) match wins
+        }
+      })
+      setIsDark(theme === 'dark')
+    }
+
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20)
+      checkTheme()
+    }
+
+    checkTheme()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -15,18 +37,26 @@ export default function Navbar({ links }) {
   const close = () => setMenuOpen(false)
 
   return (
-    <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
+    <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}${isDark ? ' navbar--dark' : ''}`}>
       <div className="navbar__inner">
 
         {/* ── Logo ── */}
         <a href="#hero" className="navbar__logo" onClick={close}>
-          {/*
-            To use an image logo:
-              1. Drop your file in src/assets/icons/ (e.g. logo.svg)
-              2. Uncomment the import at the top of this file
-              3. Replace the <span> below with:  <img src={logo} alt="Logo" />
-          */}
-          <span className="navbar__logo-wordmark">LOGO</span>
+          <div className="navbar__logo-wrap">
+            <img
+              src={logoWhite}
+              alt="Breakwalls"
+              className="navbar__logo-img"
+              style={{ opacity: isDark ? 1 : 0 }}
+            />
+            <img
+              src={logoBlack}
+              alt=""
+              aria-hidden="true"
+              className="navbar__logo-img navbar__logo-img--overlay"
+              style={{ opacity: isDark ? 0 : 1 }}
+            />
+          </div>
         </a>
 
         {/* ── Desktop nav links ── */}
