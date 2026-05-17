@@ -58,10 +58,7 @@ export default function Solutions() {
     <div className="solutions">
       <div className="container">
         <div className="solutions__header">
-          <p className="section-eyebrow">Solutions</p>
-          <h2 className="section-heading">
-            Purpose-built for every layer<br />of supply chain planning.
-          </h2>
+          <h2 className="section-heading">Solutions</h2>
           <p className="section-subtext">
             From integrated business planning to last-mile order tracking, Breakwalls covers
             the full breadth of supply chain decision-making in one connected platform.

@@ -29,10 +29,7 @@ export default function About() {
       <div className="container">
 
         <div className="about__header">
-          <p className="section-eyebrow">About Us</p>
-          <h2 className="section-heading">
-            The team behind<br />Breakwalls.
-          </h2>
+          <h2 className="section-heading">About Us</h2>
           <p className="section-subtext">
             We are a team of supply chain practitioners and technologists who have spent careers
             inside the problem. Breakwalls exists because we believe that the tools most
@@ -54,24 +51,6 @@ export default function About() {
         </div>
 
       </div>
-
-      <div className="about__contact" id="contact" data-navbar-theme="light">
-        <div className="container">
-          <p className="section-eyebrow">Get in Touch</p>
-          <h2 className="about__contact-heading">
-            Let's talk about your<br />supply chain.
-          </h2>
-          <p className="about__contact-sub">
-            Whether you're exploring a new implementation, looking to audit an existing system,
-            or simply want to understand what Breakwalls could do for your organisation —
-            we'd love to hear from you.
-          </p>
-          <a href="mailto:hello@breakwalls.com" className="about__contact-btn">
-            Get in touch →
-          </a>
-        </div>
-      </div>
-
     </div>
   )
 }

@@ -56,10 +56,7 @@ export default function WhatWeDo() {
     <div className="what-we-do">
       <div className="container">
         <div className="what-we-do__header">
-          <p className="section-eyebrow">What We Do</p>
-          <h2 className="section-heading">
-            Connected planning and execution,<br />across your entire value chain.
-          </h2>
+          <h2 className="section-heading">What We Do</h2>
           <p className="section-subtext">
             Breakwalls brings together demand, supply, channel, and partner data into a single,
             actionable system — so your organisation can sense change and respond faster than

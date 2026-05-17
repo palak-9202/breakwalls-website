@@ -6,6 +6,7 @@ import Testimonials from './components/sections/Testimonials'
 import Services from './components/sections/Services'
 import WhyUs from './components/sections/WhyUs'
 import About from './components/sections/About'
+import Contact from './components/sections/Contact'
 
 // ─── Section registry ──────────────────────────────────────────────────────
 // Add a section:    import it above, add an entry here.
@@ -20,6 +21,7 @@ const SECTIONS = [
   { id: 'services',    label: 'Services',    component: Services,     theme: 'light' },
   { id: 'why-us',      label: 'Why Us',      component: WhyUs,        theme: 'light' },
   { id: 'about',       label: 'About',       component: About,        theme: 'dark'  },
+  { id: 'contact',    label: 'Contact',     component: Contact,      theme: 'light' },
 ]
 
 const navLinks = SECTIONS.filter(s => s.label !== null)

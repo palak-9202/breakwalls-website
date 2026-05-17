@@ -32,10 +32,7 @@ export default function Services() {
     <div className="services">
       <div className="container">
         <div className="services__header">
-          <p className="section-eyebrow">Services</p>
-          <h2 className="section-heading">
-            Beyond software — a partner<br />in supply chain transformation.
-          </h2>
+          <h2 className="section-heading">Services</h2>
           <p className="section-subtext">
             Our services are designed to accelerate value realisation, reduce implementation risk,
             and build long-term supply chain capability within your organisation.

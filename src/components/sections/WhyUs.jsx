@@ -28,10 +28,7 @@ export default function WhyUs() {
     <div className="why-us">
       <div className="container">
         <div className="why-us__header">
-          <p className="section-eyebrow">Why Us</p>
-          <h2 className="section-heading">
-            What makes Breakwalls<br />the right choice.
-          </h2>
+          <h2 className="section-heading">Why Breakwalls?</h2>
         </div>
 
         <div className="why-us__grid">

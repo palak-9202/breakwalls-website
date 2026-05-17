@@ -1,46 +1,78 @@
 .contact {
-  padding: 9rem 0;
-  background: var(--color-bg-dark);
+  background: var(--color-bg-alt);
 }
 
 .contact__inner {
-  max-width: 680px;
-}
-
-/* Override the shared eyebrow colour on dark background */
-.contact__eyebrow {
-  color: rgba(255, 255, 255, 0.38);
-}
-
-.contact__heading {
-  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: #ffffff;
-  margin-bottom: 1.25rem;
+  padding: 6rem 0 5rem;
+  max-width: 520px;
 }
 
 .contact__sub {
   font-size: 1rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.45);
-  max-width: 400px;
-  margin-bottom: 2.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.75rem;
+  margin-bottom: 2.5rem;
 }
 
-.contact__btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.8rem 2rem;
+/* ── Contact list ── */
+
+.contact__details {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.contact__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.contact__item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-text-muted);
+}
+
+.contact__item a {
   font-size: 0.95rem;
-  font-weight: 500;
-  font-family: var(--font);
-  color: var(--color-bg-dark);
-  background: #ffffff;
-  border-radius: 8px;
-  border: 1px solid #ffffff;
-  transition: opacity 0.2s;
+  line-height: 1.6;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.contact__btn:hover { opacity: 0.82; }
+.contact__item a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.contact__multiline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact__address {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  font-style: normal;
+}
+
+/* ── Copyright bar ── */
+
+.contact__footer {
+  background: var(--color-bg-dark);
+  padding: 1.25rem 2rem;
+  text-align: center;
+}
+
+.contact__copyright {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.02em;
+}
