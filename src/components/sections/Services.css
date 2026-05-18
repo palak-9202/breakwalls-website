@@ -27,19 +27,32 @@
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
 }
 
-.services__card-icon {
-  width: 34px;
-  height: 34px;
-  background: var(--color-text);
-  border-radius: 8px;
+.services__card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
   margin-bottom: 1.5rem;
+}
+
+.services__card-icon-wrap {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--icon-color) 12%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--icon-color) 30%, transparent);
+}
+
+.services__card-icon {
+  color: var(--icon-color);
+  display: block;
 }
 
 .services__card-title {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .services__card-list {

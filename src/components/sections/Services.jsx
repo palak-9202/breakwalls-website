@@ -1,7 +1,10 @@
 import './Services.css'
+import { Code2, ClipboardCheck, FlaskConical } from 'lucide-react'
 
 const SERVICES = [
   {
+    icon: Code2,
+    iconColor: '#34d399',
     title: 'Custom Development Services',
     bullets: [
       'Tailored solution design built on the Breakwalls platform to match your exact business processes and integration requirements',
@@ -10,6 +13,8 @@ const SERVICES = [
     ],
   },
   {
+    icon: ClipboardCheck,
+    iconColor: '#60a5fa',
     title: 'Project Audits to Maximise Value and Minimise Risks',
     bullets: [
       'Structured health-check of your existing supply chain technology implementations — identifying gaps between intended and realised value',
@@ -18,6 +23,8 @@ const SERVICES = [
     ],
   },
   {
+    icon: FlaskConical,
+    iconColor: '#e879f9',
     title: 'SCM Stimulator Workshop',
     bullets: [
       'Immersive, hands-on simulation of your supply chain operating scenarios — surfacing constraints, bottlenecks, and decision trade-offs in a controlled environment',
@@ -40,10 +47,14 @@ export default function Services() {
         </div>
 
         <div className="services__grid">
-          {SERVICES.map(({ title, bullets }) => (
+          {SERVICES.map(({ icon: Icon, iconColor, title, bullets }) => (
             <div key={title} className="services__card">
-              <div className="services__card-icon" aria-hidden />
-              <h3 className="services__card-title">{title}</h3>
+              <div className="services__card-header">
+                <div className="services__card-icon-wrap" style={{ '--icon-color': iconColor }}>
+                  <Icon className="services__card-icon" size={32} strokeWidth={1.6} aria-hidden />
+                </div>
+                <h3 className="services__card-title">{title}</h3>
+              </div>
               <ul className="services__card-list">
                 {bullets.map((item, i) => (
                   <li key={i}>{item}</li>

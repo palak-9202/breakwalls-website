@@ -1,7 +1,17 @@
 import './Solutions.css'
+import {
+  LineChart,
+  PackageSearch,
+  Handshake,
+  Network,
+  Tags,
+  PackageCheck,
+} from 'lucide-react'
 
 const CARDS = [
   {
+    icon: LineChart,
+    iconColor: '#22d3ee',
     title: 'Integrated Business Planning (IBP), S & OP',
     bullets: [
       'Collaborative workflows and scenarios to finalise the business plan',
@@ -12,6 +22,8 @@ const CARDS = [
     ],
   },
   {
+    icon: PackageSearch,
+    iconColor: '#a78bfa',
     title: 'Integrated Supply Planning',
     bullets: [
       'Material requirements planning driven by real-time supply signals',
@@ -20,6 +32,8 @@ const CARDS = [
     ],
   },
   {
+    icon: Handshake,
+    iconColor: '#fb923c',
     title: 'Supply Partners Collaboration',
     bullets: [
       'Vendor-facing portal for order confirmations, updates, and forecasts',
@@ -28,6 +42,8 @@ const CARDS = [
     ],
   },
   {
+    icon: Network,
+    iconColor: '#4ade80',
     title: 'Channel Management',
     bullets: [
       'Management of channel sales plans and actuals, channel inventory targets and actuals, and end-user reporting',
@@ -36,6 +52,8 @@ const CARDS = [
     ],
   },
   {
+    icon: Tags,
+    iconColor: '#f472b6',
     title: 'Product Mix and Price Optimization',
     bullets: [
       'Margin-aware product portfolio analysis and optimisation',
@@ -44,6 +62,8 @@ const CARDS = [
     ],
   },
   {
+    icon: PackageCheck,
+    iconColor: '#fbbf24',
     title: 'Detailed Order Tracking',
     bullets: [
       'End-to-end order lifecycle visibility from placement to delivery',
@@ -66,10 +86,14 @@ export default function Solutions() {
         </div>
 
         <div className="solutions__grid">
-          {CARDS.map(({ title, bullets }) => (
+          {CARDS.map(({ icon: Icon, iconColor, title, bullets }) => (
             <div key={title} className="solutions__card">
-              <div className="solutions__card-icon" aria-hidden />
-              <h3 className="solutions__card-title">{title}</h3>
+              <div className="solutions__card-header">
+                <div className="solutions__card-icon-wrap" style={{ '--icon-color': iconColor }}>
+                  <Icon className="solutions__card-icon" size={32} strokeWidth={1.6} aria-hidden />
+                </div>
+                <h3 className="solutions__card-title">{title}</h3>
+              </div>
               <ul className="solutions__card-bullets">
                 {bullets.map((b, i) => (
                   <li key={i}>{b}</li>
